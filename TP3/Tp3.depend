@@ -1,0 +1,51 @@
+# depslib dependency file v1.0
+1624234487 source:c:\users\jenni\escritorio\tp3\controller.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"LinkedList.h"
+	"Employee.h"
+	"utn_biblioteca.h"
+	"parser.h"
+	"Controller.h"
+
+1623862904 c:\users\jenni\escritorio\tp3\linkedlist.h
+
+1624227854 c:\users\jenni\escritorio\tp3\employee.h
+
+1624234214 source:c:\users\jenni\escritorio\tp3\employee.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Employee.h"
+
+1624230150 source:c:\users\jenni\escritorio\tp3\main.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Controller.h"
+	"Employee.h"
+	"utn_biblioteca.h"
+
+1624230133 c:\users\jenni\escritorio\tp3\controller.h
+	"Employee.h"
+
+1624126200 source:c:\users\jenni\escritorio\tp3\parser.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"LinkedList.h"
+	"Employee.h"
+	"Controller.h"
+
+1624233927 source:c:\users\jenni\escritorio\tp3\utn_biblioteca.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stdlib.h>
+	"utn_biblioteca.h"
+
+1623973615 c:\users\jenni\escritorio\tp3\utn_biblioteca.h
+
+1624042905 c:\users\jenni\escritorio\tp3\parser.h
+
