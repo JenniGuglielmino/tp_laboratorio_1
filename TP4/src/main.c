@@ -1,14 +1,34 @@
+/*
+    utest example : Unit test examples.
+    Copyright (C) <2018>  <Mauricio Davila>
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "LinkedList.h"
+#include "../testing/inc/main_test.h"
+#include "../inc/LinkedList.h"
 
-typedef struct{
+typedef struct
+{
     int id;
     char nombre[20];
     int edad;
     char sexo;
-}eMascota;
+} eMascota;
 
 //funciones para mostar
 int mostrarMascota(eMascota* m1);
@@ -25,8 +45,28 @@ int cmp_SexoMascota(void* a, void* b);
 int cmp_NombreMascota(void* a, void* b);
 int cmp_EdadMascota(void* a, void* b);
 
-int main()
+int main(void)
 {
+    //startTesting(1);  // ll_newLinkedList
+    //startTesting(2);  // ll_len
+    //startTesting(3);  // getNode - test_getNode
+    //startTesting(4);  // addNode - test_addNode
+    //startTesting(5);  // ll_add
+    //startTesting(6);  // ll_get
+    //startTesting(7);  // ll_set
+    //startTesting(8);  // ll_remove
+    //startTesting(9);  // ll_clear
+    //startTesting(10); // ll_deleteLinkedList
+    //startTesting(11); // ll_indexOf
+    //startTesting(12); // ll_isEmpty
+    //startTesting(13); // ll_push
+    //startTesting(14); // ll_pop
+    //startTesting(15); // ll_contains
+    //startTesting(16); // ll_containsAll
+    //startTesting(17); // ll_subList
+    //startTesting(18); // ll_clone
+    //startTesting(19); // ll_sort
+
     //Crear un linkedlist -> funcion ll_newLinkedList
     LinkedList* lista = ll_newLinkedList();
 
@@ -39,10 +79,10 @@ int main()
 
     //Agregar una mascota a la lista linkedlist -> funcion ll_add
     if(!ll_add(lista, &m1)&&
-    !ll_add(lista, &m2)&&
-    !ll_add(lista, &m3)&&
-    !ll_add(lista, &m4)&&
-    !ll_add(lista, &m5))
+            !ll_add(lista, &m2)&&
+            !ll_add(lista, &m3)&&
+            !ll_add(lista, &m4)&&
+            !ll_add(lista, &m5))
     {
         printf("Se agregaron correctamente\n");
     }
@@ -141,11 +181,11 @@ int main()
     //Saber si la lista contiene o no cierto elemento -> funcion ll_contains
     /*if(ll_contains(lista, &m5))
     {
-        printf("La lista no contiene este elemento!\n");
+        printf("La lista contiene al elemento\n");
     }
     else if(!ll_contains(lista, &m5))
     {
-        printf("La lista contiene al elemento\n");
+         printf("La lista no contiene este elemento!\n");
     }*/
 
     //Saber si la lista contiene todos los elementos de la segunda lista -> funcion ll_containsAll
@@ -214,7 +254,7 @@ int esMacho(void* m)
 }
 int esHembra(void* m)
 {
-     int todoOk = 0;
+    int todoOk = 0;
     eMascota* unaMascota = NULL;
     if(m != NULL)
     {
@@ -228,7 +268,7 @@ int esHembra(void* m)
 }
 int esKira(void* m)
 {
-     int todoOk = 0;
+    int todoOk = 0;
     eMascota* unaMascota = NULL;
     if(m != NULL)
     {
@@ -243,7 +283,7 @@ int esKira(void* m)
 }
 int esMayor5(void* m)
 {
-     int todoOk = 0;
+    int todoOk = 0;
     eMascota* unaMascota = NULL;
     if(m != NULL)
     {
@@ -259,7 +299,7 @@ int esMayor5(void* m)
 int mostrarListaMascota(LinkedList* lista)
 {
     printf("Id      Nombre    Edad  Sexo\n");
-    for(int i=0; i<ll_len(lista);i++)
+    for(int i=0; i<ll_len(lista); i++)
     {
         mostrarMascota((eMascota*)ll_get(lista, i));
     }
@@ -322,3 +362,37 @@ int cmp_SexoMascota(void* a, void* b)
     }
     return todoOk;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

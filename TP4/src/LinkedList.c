@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "LinkedList.h"
+#include "../inc/LinkedList.h"
 
 
 static Node* getNode(LinkedList* this, int nodeIndex);
@@ -366,7 +366,7 @@ int ll_contains(LinkedList* this, void* pElement)
     if(this != NULL)
     {
         returnAux = 1;
-        if(ll_indexOf(this, pElement) >= 0)
+        if(ll_indexOf(this, pElement) == -1)
         {
             returnAux = 0;
         }
